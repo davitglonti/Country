@@ -1,0 +1,347 @@
+:root {
+  --primary-bg: #202c37;
+  --dark-light: #2b3945;
+  --white-light: #fff;
+  --text: hsl(0, 0%, 100%);
+  --text-black: #000;
+  --gray: #c7cacd;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --transition: all 0.4s ease-out 0s;
+}
+
+html::-webkit-scrollbar {
+  width: 11.2px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 8px;
+  height: 25px;
+}
+
+html.theme::-webkit-scrollbar-thumb {
+  background-color: var(--dark-ligth) !important;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* {
+  background: none;
+  border: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  text-decoration: none !important;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+.font {
+  font-family: "Almarai", sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--primary-bg) !important;
+  color: var(--text) !important;
+}
+
+/* Start Header */
+.header {
+  background-color: var(--dark-light);
+  color: var(--text);
+  box-shadow: var(--shadow) !important;
+}
+
+h2 {
+  font-weight: bold !important;
+  padding-top: 20px;
+}
+
+.github svg {
+  font-size: 30px !important;
+  margin-right: 10px;
+  color: #fff;
+}
+
+/* End Header */
+/* Start Section */
+
+@media (max-width: 767px) {
+  .div-section {
+    flex-direction: column;
+  }
+}
+
+form {
+  position: relative;
+  box-shadow: var(--shadow) !important;
+}
+
+form input {
+  width: 400px;
+  background-color: var(--dark-light);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  padding: 10px 40px !important;
+  border-radius: 5px !important;
+}
+
+form input::placeholder {
+  color: #ccc;
+  font-size: 14px;
+}
+
+form svg {
+  position: absolute;
+  left: 11px;
+  top: 14px;
+}
+
+select {
+  width: 192px;
+  background-color: var(--dark-light);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  select {
+    margin-top: 25px !important;
+  }
+}
+
+/* End Section */
+/* Start CountryCard */
+.card {
+  max-width: 383px !important;
+  border-radius: 8px !important;
+  background-color: var(--dark-light) !important;
+  color: var(--text) !important;
+  overflow: hidden !important;
+  border: none !important;
+  box-shadow: var(--shadow) !important;
+  transition: var(--transition) !important;
+}
+
+.card:hover {
+  transform: scale(1.1) !important;
+}
+
+.card-img-top {
+  aspect-ratio: 3.3 / 2;
+  object-fit: cover;
+}
+
+.card-title h2 {
+  font-size: 22px !important;
+  margin-bottom: 13px !important;
+}
+
+.card-text ul {
+  padding: 10px 10px 0 10px !important;
+  margin-bottom: 0 !important;
+}
+.card-text ul li {
+  margin-bottom: 10px;
+}
+/* End CountryCard */
+/* Start CountryInfo */
+.go-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 121px;
+  padding: 5px 35px;
+  position: relative;
+  border-radius: 5px;
+  color: var(--text) !important;
+  background-color: var(--dark-light);
+  box-shadow: var(--shadow) !important;
+}
+
+.go-back span {
+  padding-left: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-img {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-data {
+    width: 100% !important;
+    padding: 25px;
+    margin-left: -30px;
+  }
+}
+
+.data {
+  gap: 32px !important;
+}
+
+.sec-data h2 {
+  font-size: 32px;
+}
+
+.data ul {
+  padding: 10px 10px 0 10px !important;
+  margin-bottom: 0 !important;
+  width: 50% !important;
+}
+.data ul li {
+  margin-bottom: 10px;
+}
+
+.borders ul {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.borders ul li:not(.empty) {
+  padding: 5px 30px;
+  border-radius: 5px;
+  color: var(--text) !important;
+  background-color: var(--dark-light);
+  box-shadow: var(--shadow) !important;
+  cursor: pointer;
+}
+
+.borders ul li:not(.empty).theme {
+  background-color: var(--white-light) !important;
+  color: var(--text-black) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* Start CountryInfo  */
+/* Start CountryWeather */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-weather {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+}
+
+.sec-weather h2 {
+  font-size: 25px;
+}
+
+.sec-weather h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -4px;
+}
+
+.wather-case {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.weather-img {
+  width: 112px;
+}
+
+.temp,
+.hum,
+.cloud,
+.wind {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--dark-light);
+}
+
+.temp .temp-degree,
+.hum .hum-degree,
+.cloud .cloud-degree,
+.wind .wind-degree {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.temp .temp-degree .icons {
+  color: var(--gray);
+}
+
+.hum .hum-degree .icons,
+.cloud .cloud-degree .icons,
+.wind .wind-degree .icons {
+  font-size: 20px;
+  color: var(--gray) !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec-map {
+    flex: 0 0 auto !important;
+    margin-top: 50px !important;
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .sec-map {
+    flex: 0 0 auto !important;
+    margin-top: 50px !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .iframe-map {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .iframe-map {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin-left: 0;
+  }
+}
+
+/* End CountryDetails  */
+/* Start Scroll to Top */
+.scroll-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  background-color: var(--gray);
+  bottom: 40px;
+  right: 30px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scroll-top i {
+  font-size: 30px;
+  color: var(--dark-light);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.scroll-top i:hover {
+  padding-bottom: 10px;
+}
+/* End Scroll to Top */
